@@ -21,7 +21,7 @@ services:
       - "443:443"
     volumes:
       - ./collected_static:/code/collected_static # 将静态文件放在nginx 服务器
-      - ./config/yaunfei.top_nginx: /etc/nginx/yaunfei.top_nginx
+      - ./config/yaunfei.top_nginx:/etc/nginx/yaunfei.top_nginx
       - ./config/nginx:/etc/nginx/conf.d
     depends_on:
       - app
