@@ -17,7 +17,8 @@ services:
     restart: always
     image: nginx:latest
     ports:
-      - "80:8088"
+#      - "80:8088"
+      - "443:443"
     volumes:
       - ./collected_static:/code/collected_static # 将静态文件放在nginx 服务器
       - ./config/nginx:/etc/nginx/conf.d
