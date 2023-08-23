@@ -92,17 +92,17 @@ DATABASES = {
         'ENFORCE_SCHEMA': True,
         'NAME': 'djongo_example',
         # 本地
-        'HOST': '127.0.0.1',
-        'PORT': 27017,
+        # 'HOST': '127.0.0.1',
+        # 'PORT': 27017,
         
         # 线上
-        # 'CLIENT': {
-        #         'host': 'db',
-        #         'port': 27017,
-        #         'username': 'root',
-        #         'password': 'root',
-        #         'authSource': 'admin'
-        # }
+        'CLIENT': {
+                'host': 'db',
+                'port': 27017,
+                'username': 'root',
+                'password': 'root',
+                'authSource': 'admin'
+        }
     }
 }
 
