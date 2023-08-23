@@ -7,7 +7,7 @@ services:
     volumes:
       - .:/code
     expose:
-      - "8088"
+      - "8000"
     depends_on:
       - db
     networks:
@@ -17,7 +17,7 @@ services:
     restart: always
     image: nginx:latest
     ports:
-      - "8088:8088"
+      - "8000:8000"
     volumes:
       - ./collected_static:/code/collected_static # 将静态文件放在nginx 服务器
       - ./config/nginx:/etc/nginx/conf.d
