@@ -54,8 +54,8 @@ class SpuInfoList(APIView):
         return Response(res)
 
     def post(self, request):
-        # if not request.user.is_authenticated:
-        #     return Response('请先登录')
+        if not request.user.is_authenticated:
+            return Response('请先登录')
         res = SpuSerializer(data=request.data)
         if res.is_valid():
             res.save()

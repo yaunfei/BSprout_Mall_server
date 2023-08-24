@@ -22,9 +22,9 @@ class Skus(models.Model):
 class SpuInfo(models.Model):
     name = models.CharField('商品名', max_length=100)
     amount = models.FloatField('商品金额', max_length=99999)
-    main_url = models.CharField('商品主图', max_length=10000)
-    img_urls = models.JSONField('规格图', null=True, blank=True)
-    sku = models.EmbeddedField(model_container=Skus)
-    goods_list = models.JSONField(null=True, blank=True, default=[])
+    mainUrl = models.CharField('商品主图', max_length=10000)
+    imgUrls = models.JSONField('规格图', null=True, blank=True)
+    sku = models.ArrayField(model_container=Skus)
+    goodsList = models.JSONField(null=True, blank=True, default=[])
 
     objects = models.DjongoManager()
