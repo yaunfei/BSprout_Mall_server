@@ -23,7 +23,7 @@ class SpuInfo(models.Model):
     name = models.CharField('商品名', max_length=100)
     amount = models.FloatField('商品金额', max_length=99999)
     mainUrl = models.CharField('商品主图', max_length=10000)
-    imgUrls = models.JSONField('规格图', null=True, blank=True)
+    imgurls = models.JSONField('规格图', null=True, blank=True)
     sku = models.ArrayField(model_container=Skus)
     goodsList = models.JSONField(null=True, blank=True, default=[])
 
