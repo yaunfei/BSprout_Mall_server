@@ -20,6 +20,7 @@ class Skus(models.Model):
 
 
 class SpuInfo(models.Model):
+    _id = models.CharField('账号id', max_length=99999)
     name = models.CharField('商品名', max_length=100)
     amount = models.FloatField('商品金额', max_length=99999)
     mainUrl = models.CharField('商品主图', max_length=10000)
